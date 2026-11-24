@@ -1,0 +1,16 @@
+[project]
+name = "chunk-export"
+version = "0.1.0"
+description = "三轴分块整数数据的离线子窗导出（换轴/逆序/缺值溯源/单次开块）"
+requires-python = ">=3.9"
+dependencies = ["numpy"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
