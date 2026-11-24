@@ -25,10 +25,37 @@ class SourceRef:
     is_fill: bool  # value == fill_value
 
 
+def _peek_manifest_format(export_dir):
+    """只读取清单 format 字段；任何读取/解析失败返回 None（交由主流程报错）。"""
+    try:
+        m = json.loads((Path(export_dir) / "manifest.json").read_text(
+            encoding="utf-8"))
+        return m.get("format") if isinstance(m, dict) else None
+    except (OSError, ValueError):
+        return None
+
+
 class ResultIndex:
-    """导出目录的可查询索引；至多驻留 2 个交付块。"""
+    """导出目录的可查询索引；至多驻留 2 个交付块。
+
+    对 ``chunk-merge/1`` 合并清单，``ResultIndex(dir)`` 会透明返回
+    :class:`~chunk_export.merge.MergeIndex` 实例（合并溯源索引）；
+    对既有 ``chunk-export/1`` 清单行为完全不变。
+    """
+
+    def __new__(cls, export_dir):
+        if cls is ResultIndex:
+            fmt = _peek_manifest_format(export_dir)
+            if fmt == "chunk-merge/1":
+                from .merge import MergeIndex
+                return MergeIndex(export_dir)
+        return super().__new__(cls)
 
     def __init__(self, export_dir):
+        # __new__ 已把合并清单委托给 MergeIndex 并完成其初始化；若解释器
+        # 随后回调本基类 __init__（因子类关系），在此直接跳过以免格式报错。
+        if _peek_manifest_format(export_dir) == "chunk-merge/1":
+            return
         self.dir = Path(export_dir)
         m = json.loads((self.dir / "manifest.json").read_text(encoding="utf-8"))
         if m.get("format") != MANIFEST_FORMAT:
@@ -83,3 +110,12 @@ class ResultIndex:
 
     def _load_value(self, tc, local):
         return self._load(tc)[local]
+
+
+def __getattr__(name):  # pragma: no cover - 命名空间转发
+    """允许 ``from chunk_export.index import MergeIndex`` 等写法。"""
+    if name in ("MergeIndex", "MergedIndex", "MergeResultIndex",
+                "MergedResultIndex", "MergeSourceRef"):
+        from . import merge as _merge
+        return getattr(_merge, name)
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")

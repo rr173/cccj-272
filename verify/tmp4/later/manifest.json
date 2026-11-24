@@ -1,0 +1,96 @@
+{
+  "format": "chunk-export/1",
+  "source": {
+    "logical_shape": [
+      4,
+      2,
+      2
+    ],
+    "chunk_shape": [
+      2,
+      2,
+      2
+    ],
+    "dtype": "int32",
+    "fill_value": -9,
+    "unsampled_chunks": []
+  },
+  "request": {
+    "axes": [
+      {
+        "start": 0,
+        "step": 1,
+        "count": 4
+      },
+      {
+        "start": 0,
+        "step": 1,
+        "count": 2
+      },
+      {
+        "start": 0,
+        "step": 1,
+        "count": 2
+      }
+    ],
+    "target_axis_order": [
+      0,
+      1,
+      2
+    ],
+    "target_chunk_shape": [
+      4,
+      2,
+      2
+    ]
+  },
+  "target_grid_shape": [
+    4,
+    2,
+    2
+  ],
+  "chunks": [
+    {
+      "chunk": [
+        0,
+        0,
+        0
+      ],
+      "shape": [
+        4,
+        2,
+        2
+      ],
+      "file": "chunks/t0_0_0.npy",
+      "elements": 16,
+      "bytes": 192,
+      "sha256": "af912a89c45d37462947429c88b1bed16002830c9384cb6cc50c475395e98ded"
+    }
+  ],
+  "accounting": {
+    "opened": [
+      {
+        "chunk": [
+          0,
+          0,
+          0
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 0
+      },
+      {
+        "chunk": [
+          1,
+          0,
+          0
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 1
+      }
+    ],
+    "open_count": 2,
+    "bytes_read": 320
+  }
+}

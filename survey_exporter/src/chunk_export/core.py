@@ -179,11 +179,14 @@ class Exporter:
             arr = np.array(mm, copy=True)  # 输出缓冲：一次一个目标块
             rel = f"chunks/t{tc[0]}_{tc[1]}_{tc[2]}.npy"
             np.save(tmp_out / rel, arr)  # C 序，块内末轴最快；边缘块仅含实际点
+            chunk_bytes = (tmp_out / rel).read_bytes()
             chunks_meta.append({
                 "chunk": list(tc),
                 "shape": list(shape),
                 "file": rel,
                 "elements": int(np.prod(shape)),
+                "bytes": len(chunk_bytes),
+                "sha256": hashlib.sha256(chunk_bytes).hexdigest(),
             })
 
         manifest = {
@@ -305,3 +308,18 @@ class Exporter:
             mm = np.memmap(path, dtype=self.catalog.dtype, mode="w+", shape=shape)
             mmaps[tc] = mm
         return mm
+
+
+# 命名空间兼容：允许 ``from chunk_export.core import Merger`` 等。
+# 放在模块末尾导入以避免循环导入（merge 仅依赖 core 顶部的常量）。
+def __getattr__(name):  # pragma: no cover - 简单转发
+    _MERGE_NAMES = {
+        "Merger", "MergeExporter", "PackageMerger", "MergeJob",
+        "MergeIndex", "MergedIndex", "MergeResultIndex",
+        "MergeSourceRef", "MergeRequest", "merge_exports",
+        "merge_packages", "merge_directories", "run_merge",
+    }
+    if name in _MERGE_NAMES:
+        from . import merge as _merge
+        return getattr(_merge, name)
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")

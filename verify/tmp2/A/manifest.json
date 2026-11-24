@@ -1,0 +1,368 @@
+{
+  "format": "chunk-export/1",
+  "source": {
+    "logical_shape": [
+      5,
+      4,
+      6
+    ],
+    "chunk_shape": [
+      2,
+      2,
+      2
+    ],
+    "dtype": "int32",
+    "fill_value": -9,
+    "unsampled_chunks": []
+  },
+  "request": {
+    "axes": [
+      {
+        "start": 4,
+        "step": -2,
+        "count": 3
+      },
+      {
+        "start": 0,
+        "step": 1,
+        "count": 4
+      },
+      {
+        "start": 5,
+        "step": -2,
+        "count": 3
+      }
+    ],
+    "target_axis_order": [
+      2,
+      0,
+      1
+    ],
+    "target_chunk_shape": [
+      2,
+      2,
+      2
+    ]
+  },
+  "target_grid_shape": [
+    3,
+    3,
+    4
+  ],
+  "chunks": [
+    {
+      "chunk": [
+        0,
+        0,
+        0
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/t0_0_0.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "cee2f174d9be44834a2b2f08626a2eef0d3302c0535b97dd62d9dbe6154c6083"
+    },
+    {
+      "chunk": [
+        0,
+        0,
+        1
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/t0_0_1.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "bc1c8c44cbc493de2369c39b90f54ce5586d364d906dc07d4344f7c7ed896fe5"
+    },
+    {
+      "chunk": [
+        0,
+        1,
+        0
+      ],
+      "shape": [
+        2,
+        1,
+        2
+      ],
+      "file": "chunks/t0_1_0.npy",
+      "elements": 4,
+      "bytes": 144,
+      "sha256": "b30b0ea63525df0f1c4b293c7bac5bee0264cf4d31f7b2cf468fe7cf2095a145"
+    },
+    {
+      "chunk": [
+        0,
+        1,
+        1
+      ],
+      "shape": [
+        2,
+        1,
+        2
+      ],
+      "file": "chunks/t0_1_1.npy",
+      "elements": 4,
+      "bytes": 144,
+      "sha256": "ba1ffb7750ff872c4f9affa3b9baa4051ece97dceee2c952194fde92c21fed36"
+    },
+    {
+      "chunk": [
+        1,
+        0,
+        0
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file": "chunks/t1_0_0.npy",
+      "elements": 4,
+      "bytes": 144,
+      "sha256": "aa9f87d3092c271a9663615fbcb0563f3e64a9c8e24c9a6c73f13d7db52f427b"
+    },
+    {
+      "chunk": [
+        1,
+        0,
+        1
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file": "chunks/t1_0_1.npy",
+      "elements": 4,
+      "bytes": 144,
+      "sha256": "6788fb4c57a74f99d364fd664dcc1f527e8c9abb28dbc728d9db198fb15df370"
+    },
+    {
+      "chunk": [
+        1,
+        1,
+        0
+      ],
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "file": "chunks/t1_1_0.npy",
+      "elements": 2,
+      "bytes": 136,
+      "sha256": "81bb18f0fa66d01ed49294af3a7a728acf43aeb0c465ef2ee44b975343760133"
+    },
+    {
+      "chunk": [
+        1,
+        1,
+        1
+      ],
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "file": "chunks/t1_1_1.npy",
+      "elements": 2,
+      "bytes": 136,
+      "sha256": "ad2729d5978555c26f56d9c0b7493952585844f90a1446eb0c64475ad78de274"
+    }
+  ],
+  "accounting": {
+    "opened": [
+      {
+        "chunk": [
+          0,
+          0,
+          0
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 0
+      },
+      {
+        "chunk": [
+          0,
+          0,
+          1
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 1
+      },
+      {
+        "chunk": [
+          0,
+          0,
+          2
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 2
+      },
+      {
+        "chunk": [
+          0,
+          1,
+          0
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 3
+      },
+      {
+        "chunk": [
+          0,
+          1,
+          1
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 4
+      },
+      {
+        "chunk": [
+          0,
+          1,
+          2
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 5
+      },
+      {
+        "chunk": [
+          1,
+          0,
+          0
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 6
+      },
+      {
+        "chunk": [
+          1,
+          0,
+          1
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 7
+      },
+      {
+        "chunk": [
+          1,
+          0,
+          2
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 8
+      },
+      {
+        "chunk": [
+          1,
+          1,
+          0
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 9
+      },
+      {
+        "chunk": [
+          1,
+          1,
+          1
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 10
+      },
+      {
+        "chunk": [
+          1,
+          1,
+          2
+        ],
+        "bytes": 160,
+        "elements": 8,
+        "order": 11
+      },
+      {
+        "chunk": [
+          2,
+          0,
+          0
+        ],
+        "bytes": 144,
+        "elements": 4,
+        "order": 12
+      },
+      {
+        "chunk": [
+          2,
+          0,
+          1
+        ],
+        "bytes": 144,
+        "elements": 4,
+        "order": 13
+      },
+      {
+        "chunk": [
+          2,
+          0,
+          2
+        ],
+        "bytes": 144,
+        "elements": 4,
+        "order": 14
+      },
+      {
+        "chunk": [
+          2,
+          1,
+          0
+        ],
+        "bytes": 144,
+        "elements": 4,
+        "order": 15
+      },
+      {
+        "chunk": [
+          2,
+          1,
+          1
+        ],
+        "bytes": 144,
+        "elements": 4,
+        "order": 16
+      },
+      {
+        "chunk": [
+          2,
+          1,
+          2
+        ],
+        "bytes": 144,
+        "elements": 4,
+        "order": 17
+      }
+    ],
+    "open_count": 18,
+    "bytes_read": 2784
+  }
+}

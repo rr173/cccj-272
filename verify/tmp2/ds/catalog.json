@@ -1,0 +1,288 @@
+{
+  "logical_shape": [
+    5,
+    4,
+    6
+  ],
+  "chunk_shape": [
+    2,
+    2,
+    2
+  ],
+  "dtype": "int32",
+  "fill_value": -9,
+  "max_decode_elements": 1000000,
+  "chunks": {
+    "0,0,0": {
+      "path": "chunks/c0_0_0.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "05b1e04aab91e73b768316ab9ae11b2cc891b7fd09c73a1c1df3f3bd9d908bba"
+    },
+    "0,0,1": {
+      "path": "chunks/c0_0_1.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "70ffbaf5545d25d27870a92407d8f1fb9d28946f7c0144107dc3af2ca56da5ba"
+    },
+    "0,0,2": {
+      "path": "chunks/c0_0_2.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "057f26c76983c83958ede70359109c66a61ca521825e76ed4cfb4e7b0905792e"
+    },
+    "0,1,0": {
+      "path": "chunks/c0_1_0.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "0cf2674f08925ca479c170149bf9a096e46bf067130f6c713333473b3a2df596"
+    },
+    "0,1,1": {
+      "path": "chunks/c0_1_1.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "ff096165ed5de2a973efcc952788889ea02ac324c2ac964d68426d3bc0fd56d8"
+    },
+    "0,1,2": {
+      "path": "chunks/c0_1_2.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "4e0df7feac16808358b368022da9976f551e10be0e77ba031329de5b4820580b"
+    },
+    "1,0,0": {
+      "path": "chunks/c1_0_0.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "646b26a5bf54f93b116c5c13dd3fbb723b0c21008758d65e24d7cb22d0f7d4df"
+    },
+    "1,0,1": {
+      "path": "chunks/c1_0_1.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "ba03390ba62b82230d99189e786a8a36799e295620ee73dc65c3c56207149a7b"
+    },
+    "1,0,2": {
+      "path": "chunks/c1_0_2.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "67a621fa876adf1b3cccd4a7e2fb2cbca593c079ba6c2bce62d90eb7bd07340a"
+    },
+    "1,1,0": {
+      "path": "chunks/c1_1_0.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "54ec527574fb62f4ce3ba5bfa73ac1923d20caae68fa6a2f13cc4b56e168b806"
+    },
+    "1,1,1": {
+      "path": "chunks/c1_1_1.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "29e93fe5b6076f555091236418875611cf24102365e94ce6b0ef6499d74cb295"
+    },
+    "1,1,2": {
+      "path": "chunks/c1_1_2.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "fdf8b9dfe85db57731cd09e66dd9855405a166e8aae4e56106d9b3fbb9c6e697"
+    },
+    "2,0,0": {
+      "path": "chunks/c2_0_0.npy",
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 4,
+      "sha256": "5ecbb8c8dd551e6525c88647d7169da04d322e9ef060836945f52c5670e31e63"
+    },
+    "2,0,1": {
+      "path": "chunks/c2_0_1.npy",
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 4,
+      "sha256": "ba70a42e5ed96fb2b32a35b20cd44b83c4685d44a4e183f163912bbd5086e825"
+    },
+    "2,0,2": {
+      "path": "chunks/c2_0_2.npy",
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 4,
+      "sha256": "91fa90eda75b55cd73c6b2ade9e44e6b8a9a86757c5f5bf175d101ac48a59bf9"
+    },
+    "2,1,0": {
+      "path": "chunks/c2_1_0.npy",
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 4,
+      "sha256": "0a42fa4db301258e0985864710efed8f6d7609d6bd113af018a8071b0513fa88"
+    },
+    "2,1,1": {
+      "path": "chunks/c2_1_1.npy",
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 4,
+      "sha256": "89a9320f32b06b6ab438495621c5adcc347272f108dcf2a61e895bbaf72997ea"
+    },
+    "2,1,2": {
+      "path": "chunks/c2_1_2.npy",
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 4,
+      "sha256": "d42e2931947b495e89dddb84fe91d2e1ce5b37733405155e390a69ad32a981ec"
+    }
+  },
+  "unsampled": []
+}

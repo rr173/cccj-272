@@ -1,0 +1,1099 @@
+{
+  "format": "chunk-merge/1",
+  "source": {
+    "logical_shape": [
+      5,
+      4,
+      6
+    ],
+    "chunk_shape": [
+      2,
+      2,
+      2
+    ],
+    "grid_shape": [
+      3,
+      2,
+      3
+    ],
+    "dtype": "int32",
+    "fill_value": -9,
+    "unsampled_chunks": []
+  },
+  "logical_shape": [
+    5,
+    4,
+    6
+  ],
+  "chunk_shape": [
+    2,
+    2,
+    2
+  ],
+  "source_chunk_shape": [
+    2,
+    2,
+    2
+  ],
+  "grid_shape": [
+    3,
+    2,
+    3
+  ],
+  "dtype": "int32",
+  "fill_value": -9,
+  "request": {
+    "axes": [
+      {
+        "start": 0,
+        "step": 1,
+        "count": 5
+      },
+      {
+        "start": 0,
+        "step": 1,
+        "count": 4
+      },
+      {
+        "start": 0,
+        "step": 1,
+        "count": 6
+      }
+    ],
+    "target_axis_order": [
+      0,
+      1,
+      2
+    ],
+    "target_chunk_shape": [
+      2,
+      2,
+      2
+    ]
+  },
+  "target_axis_order": [
+    0,
+    1,
+    2
+  ],
+  "target_chunk_shape": [
+    2,
+    2,
+    2
+  ],
+  "target_grid_shape": [
+    5,
+    4,
+    6
+  ],
+  "target_dims": [
+    3,
+    2,
+    3
+  ],
+  "inputs": [
+    {
+      "index": 0,
+      "path": "/workspace/verify/tmp2/E",
+      "resolved_path": "/workspace/verify/tmp2/E",
+      "format": "chunk-export/1",
+      "kind": "export",
+      "logical_shape": [
+        5,
+        4,
+        6
+      ],
+      "chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "grid_shape": [
+        3,
+        2,
+        3
+      ],
+      "dtype": "int32",
+      "fill_value": -9,
+      "target_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "target_chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "target_grid_shape": [
+        0,
+        2,
+        2
+      ],
+      "request": {
+        "axes": [
+          {
+            "start": 999,
+            "step": 1,
+            "count": 0
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 2
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 2
+          }
+        ],
+        "target_axis_order": [
+          0,
+          1,
+          2
+        ],
+        "target_chunk_shape": [
+          2,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "path": "/workspace/verify/tmp2/A",
+      "resolved_path": "/workspace/verify/tmp2/A",
+      "format": "chunk-export/1",
+      "kind": "export",
+      "logical_shape": [
+        5,
+        4,
+        6
+      ],
+      "chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "grid_shape": [
+        3,
+        2,
+        3
+      ],
+      "dtype": "int32",
+      "fill_value": -9,
+      "target_axis_order": [
+        2,
+        0,
+        1
+      ],
+      "target_chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "target_grid_shape": [
+        3,
+        3,
+        4
+      ],
+      "request": {
+        "axes": [
+          {
+            "start": 4,
+            "step": -2,
+            "count": 3
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 4
+          },
+          {
+            "start": 5,
+            "step": -2,
+            "count": 3
+          }
+        ],
+        "target_axis_order": [
+          2,
+          0,
+          1
+        ],
+        "target_chunk_shape": [
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  ],
+  "packages": [
+    {
+      "index": 0,
+      "path": "/workspace/verify/tmp2/E",
+      "resolved_path": "/workspace/verify/tmp2/E",
+      "format": "chunk-export/1",
+      "kind": "export",
+      "logical_shape": [
+        5,
+        4,
+        6
+      ],
+      "chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "grid_shape": [
+        3,
+        2,
+        3
+      ],
+      "dtype": "int32",
+      "fill_value": -9,
+      "target_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "target_chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "target_grid_shape": [
+        0,
+        2,
+        2
+      ],
+      "request": {
+        "axes": [
+          {
+            "start": 999,
+            "step": 1,
+            "count": 0
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 2
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 2
+          }
+        ],
+        "target_axis_order": [
+          0,
+          1,
+          2
+        ],
+        "target_chunk_shape": [
+          2,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "path": "/workspace/verify/tmp2/A",
+      "resolved_path": "/workspace/verify/tmp2/A",
+      "format": "chunk-export/1",
+      "kind": "export",
+      "logical_shape": [
+        5,
+        4,
+        6
+      ],
+      "chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "grid_shape": [
+        3,
+        2,
+        3
+      ],
+      "dtype": "int32",
+      "fill_value": -9,
+      "target_axis_order": [
+        2,
+        0,
+        1
+      ],
+      "target_chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "target_grid_shape": [
+        3,
+        3,
+        4
+      ],
+      "request": {
+        "axes": [
+          {
+            "start": 4,
+            "step": -2,
+            "count": 3
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 4
+          },
+          {
+            "start": 5,
+            "step": -2,
+            "count": 3
+          }
+        ],
+        "target_axis_order": [
+          2,
+          0,
+          1
+        ],
+        "target_chunk_shape": [
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "index": 0,
+      "path": "/workspace/verify/tmp2/E",
+      "resolved_path": "/workspace/verify/tmp2/E",
+      "format": "chunk-export/1",
+      "kind": "export",
+      "logical_shape": [
+        5,
+        4,
+        6
+      ],
+      "chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "grid_shape": [
+        3,
+        2,
+        3
+      ],
+      "dtype": "int32",
+      "fill_value": -9,
+      "target_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "target_chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "target_grid_shape": [
+        0,
+        2,
+        2
+      ],
+      "request": {
+        "axes": [
+          {
+            "start": 999,
+            "step": 1,
+            "count": 0
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 2
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 2
+          }
+        ],
+        "target_axis_order": [
+          0,
+          1,
+          2
+        ],
+        "target_chunk_shape": [
+          2,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "path": "/workspace/verify/tmp2/A",
+      "resolved_path": "/workspace/verify/tmp2/A",
+      "format": "chunk-export/1",
+      "kind": "export",
+      "logical_shape": [
+        5,
+        4,
+        6
+      ],
+      "chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "grid_shape": [
+        3,
+        2,
+        3
+      ],
+      "dtype": "int32",
+      "fill_value": -9,
+      "target_axis_order": [
+        2,
+        0,
+        1
+      ],
+      "target_chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "target_grid_shape": [
+        3,
+        3,
+        4
+      ],
+      "request": {
+        "axes": [
+          {
+            "start": 4,
+            "step": -2,
+            "count": 3
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 4
+          },
+          {
+            "start": 5,
+            "step": -2,
+            "count": 3
+          }
+        ],
+        "target_axis_order": [
+          2,
+          0,
+          1
+        ],
+        "target_chunk_shape": [
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  ],
+  "merged_from": [
+    {
+      "index": 0,
+      "path": "/workspace/verify/tmp2/E",
+      "resolved_path": "/workspace/verify/tmp2/E",
+      "format": "chunk-export/1",
+      "kind": "export",
+      "logical_shape": [
+        5,
+        4,
+        6
+      ],
+      "chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "grid_shape": [
+        3,
+        2,
+        3
+      ],
+      "dtype": "int32",
+      "fill_value": -9,
+      "target_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "target_chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "target_grid_shape": [
+        0,
+        2,
+        2
+      ],
+      "request": {
+        "axes": [
+          {
+            "start": 999,
+            "step": 1,
+            "count": 0
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 2
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 2
+          }
+        ],
+        "target_axis_order": [
+          0,
+          1,
+          2
+        ],
+        "target_chunk_shape": [
+          2,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "path": "/workspace/verify/tmp2/A",
+      "resolved_path": "/workspace/verify/tmp2/A",
+      "format": "chunk-export/1",
+      "kind": "export",
+      "logical_shape": [
+        5,
+        4,
+        6
+      ],
+      "chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "grid_shape": [
+        3,
+        2,
+        3
+      ],
+      "dtype": "int32",
+      "fill_value": -9,
+      "target_axis_order": [
+        2,
+        0,
+        1
+      ],
+      "target_chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "target_grid_shape": [
+        3,
+        3,
+        4
+      ],
+      "request": {
+        "axes": [
+          {
+            "start": 4,
+            "step": -2,
+            "count": 3
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 4
+          },
+          {
+            "start": 5,
+            "step": -2,
+            "count": 3
+          }
+        ],
+        "target_axis_order": [
+          2,
+          0,
+          1
+        ],
+        "target_chunk_shape": [
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  ],
+  "chunks": [
+    {
+      "chunk": [
+        0,
+        0,
+        0
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m0_0_0.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "52e8fafd2f9ff3593020d28c7e2514886ea44aee474f0f0f19148075f2f901d9",
+      "provenance": "provenance/p0_0_0.npy",
+      "winner_file": "provenance/p0_0_0.npy",
+      "winner": "provenance/p0_0_0.npy",
+      "observed": 2,
+      "unobserved": 6
+    },
+    {
+      "chunk": [
+        0,
+        0,
+        1
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m0_0_1.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "e9abf97866afc2074700a07c07783477adc52f2dd0a6d0b07d68d67647fe1e78",
+      "provenance": "provenance/p0_0_1.npy",
+      "winner_file": "provenance/p0_0_1.npy",
+      "winner": "provenance/p0_0_1.npy",
+      "observed": 2,
+      "unobserved": 6
+    },
+    {
+      "chunk": [
+        0,
+        0,
+        2
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m0_0_2.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "60c9264918d3d6aa873ea766e0a307116f6e5cab5717c0ca35a3160c29c40105",
+      "provenance": "provenance/p0_0_2.npy",
+      "winner_file": "provenance/p0_0_2.npy",
+      "winner": "provenance/p0_0_2.npy",
+      "observed": 2,
+      "unobserved": 6
+    },
+    {
+      "chunk": [
+        0,
+        1,
+        0
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m0_1_0.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "2065570e5e793400774369e8b6fb8a63f07a6a439b389ed52fb0c0ace5b43e0e",
+      "provenance": "provenance/p0_1_0.npy",
+      "winner_file": "provenance/p0_1_0.npy",
+      "winner": "provenance/p0_1_0.npy",
+      "observed": 2,
+      "unobserved": 6
+    },
+    {
+      "chunk": [
+        0,
+        1,
+        1
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m0_1_1.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "d35b440ea01e0671233a1e5d6d1db93fb982a3f0012729c9ff8e1c57ccdc1fca",
+      "provenance": "provenance/p0_1_1.npy",
+      "winner_file": "provenance/p0_1_1.npy",
+      "winner": "provenance/p0_1_1.npy",
+      "observed": 2,
+      "unobserved": 6
+    },
+    {
+      "chunk": [
+        0,
+        1,
+        2
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m0_1_2.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "fed4da33878b728afaf6b7799b841fa9884865d1f813a7c6a10665771ac8698a",
+      "provenance": "provenance/p0_1_2.npy",
+      "winner_file": "provenance/p0_1_2.npy",
+      "winner": "provenance/p0_1_2.npy",
+      "observed": 2,
+      "unobserved": 6
+    },
+    {
+      "chunk": [
+        1,
+        0,
+        0
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m1_0_0.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "39d4b1994c615153d4e2bfe3dd0283468b8bb718df27a9118b82678220770b3c",
+      "provenance": "provenance/p1_0_0.npy",
+      "winner_file": "provenance/p1_0_0.npy",
+      "winner": "provenance/p1_0_0.npy",
+      "observed": 2,
+      "unobserved": 6
+    },
+    {
+      "chunk": [
+        1,
+        0,
+        1
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m1_0_1.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "a7e70ec0c347050b512fb538719bbd91eb707d0d349f52b3e76ae6269ab4a60d",
+      "provenance": "provenance/p1_0_1.npy",
+      "winner_file": "provenance/p1_0_1.npy",
+      "winner": "provenance/p1_0_1.npy",
+      "observed": 2,
+      "unobserved": 6
+    },
+    {
+      "chunk": [
+        1,
+        0,
+        2
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m1_0_2.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "60413ad18a47a57aa5bc648bbbc33502a650b5ebd9bacad809b77553210ac904",
+      "provenance": "provenance/p1_0_2.npy",
+      "winner_file": "provenance/p1_0_2.npy",
+      "winner": "provenance/p1_0_2.npy",
+      "observed": 2,
+      "unobserved": 6
+    },
+    {
+      "chunk": [
+        1,
+        1,
+        0
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m1_1_0.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "f225828dc1313c87e372b3631045dda3da55d1fd422361316f340b326719919d",
+      "provenance": "provenance/p1_1_0.npy",
+      "winner_file": "provenance/p1_1_0.npy",
+      "winner": "provenance/p1_1_0.npy",
+      "observed": 2,
+      "unobserved": 6
+    },
+    {
+      "chunk": [
+        1,
+        1,
+        1
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m1_1_1.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "8a696a83be444fc20f9672b6db1c49feae4aea567d5ae328e38fb59bee1f9ef0",
+      "provenance": "provenance/p1_1_1.npy",
+      "winner_file": "provenance/p1_1_1.npy",
+      "winner": "provenance/p1_1_1.npy",
+      "observed": 2,
+      "unobserved": 6
+    },
+    {
+      "chunk": [
+        1,
+        1,
+        2
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m1_1_2.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "f712fb96c090e94845fe321e1f6db7351497d1144317f4b574736a8dd2e7820d",
+      "provenance": "provenance/p1_1_2.npy",
+      "winner_file": "provenance/p1_1_2.npy",
+      "winner": "provenance/p1_1_2.npy",
+      "observed": 2,
+      "unobserved": 6
+    },
+    {
+      "chunk": [
+        2,
+        0,
+        0
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file": "chunks/m2_0_0.npy",
+      "elements": 4,
+      "bytes": 144,
+      "sha256": "f6141c2388e263ad04374d13d3855510eb9980364239ecf062234692342690cc",
+      "provenance": "provenance/p2_0_0.npy",
+      "winner_file": "provenance/p2_0_0.npy",
+      "winner": "provenance/p2_0_0.npy",
+      "observed": 2,
+      "unobserved": 2
+    },
+    {
+      "chunk": [
+        2,
+        0,
+        1
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file": "chunks/m2_0_1.npy",
+      "elements": 4,
+      "bytes": 144,
+      "sha256": "6d98f45384f871046ea1879e49bc42a9b370539d7e15863c51a16d5fdee3a2b4",
+      "provenance": "provenance/p2_0_1.npy",
+      "winner_file": "provenance/p2_0_1.npy",
+      "winner": "provenance/p2_0_1.npy",
+      "observed": 2,
+      "unobserved": 2
+    },
+    {
+      "chunk": [
+        2,
+        0,
+        2
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file": "chunks/m2_0_2.npy",
+      "elements": 4,
+      "bytes": 144,
+      "sha256": "7780570ee6e8b272aa42e1ee506873917821d941640ecf556642f832db0aea6d",
+      "provenance": "provenance/p2_0_2.npy",
+      "winner_file": "provenance/p2_0_2.npy",
+      "winner": "provenance/p2_0_2.npy",
+      "observed": 2,
+      "unobserved": 2
+    },
+    {
+      "chunk": [
+        2,
+        1,
+        0
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file": "chunks/m2_1_0.npy",
+      "elements": 4,
+      "bytes": 144,
+      "sha256": "477b1109486983f696dd0baac140ed291775b9dc82c2768fe0c8c461dc66dfd9",
+      "provenance": "provenance/p2_1_0.npy",
+      "winner_file": "provenance/p2_1_0.npy",
+      "winner": "provenance/p2_1_0.npy",
+      "observed": 2,
+      "unobserved": 2
+    },
+    {
+      "chunk": [
+        2,
+        1,
+        1
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file": "chunks/m2_1_1.npy",
+      "elements": 4,
+      "bytes": 144,
+      "sha256": "866c22a7c73adec53da34c421b22ac92711a45ccbdf3901e94ef55ae3bbc6e4b",
+      "provenance": "provenance/p2_1_1.npy",
+      "winner_file": "provenance/p2_1_1.npy",
+      "winner": "provenance/p2_1_1.npy",
+      "observed": 2,
+      "unobserved": 2
+    },
+    {
+      "chunk": [
+        2,
+        1,
+        2
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "file": "chunks/m2_1_2.npy",
+      "elements": 4,
+      "bytes": 144,
+      "sha256": "63466d8331d582b9bcecc739baa986a0d4acb3b88672c2d96b36cc7b0279b514",
+      "provenance": "provenance/p2_1_2.npy",
+      "winner_file": "provenance/p2_1_2.npy",
+      "winner": "provenance/p2_1_2.npy",
+      "observed": 2,
+      "unobserved": 2
+    }
+  ],
+  "stats": {
+    "input_count": 2,
+    "elements": 120,
+    "observed": 36,
+    "unobserved": 84,
+    "opened_chunk_count": 8,
+    "opened_chunks": [
+      {
+        "input": 1,
+        "chunk": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "input": 1,
+        "chunk": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "input": 1,
+        "chunk": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "input": 1,
+        "chunk": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "input": 1,
+        "chunk": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "input": 1,
+        "chunk": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "input": 1,
+        "chunk": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "input": 1,
+        "chunk": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  }
+}

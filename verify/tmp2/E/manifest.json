@@ -1,0 +1,58 @@
+{
+  "format": "chunk-export/1",
+  "source": {
+    "logical_shape": [
+      5,
+      4,
+      6
+    ],
+    "chunk_shape": [
+      2,
+      2,
+      2
+    ],
+    "dtype": "int32",
+    "fill_value": -9,
+    "unsampled_chunks": []
+  },
+  "request": {
+    "axes": [
+      {
+        "start": 999,
+        "step": 1,
+        "count": 0
+      },
+      {
+        "start": 0,
+        "step": 1,
+        "count": 2
+      },
+      {
+        "start": 0,
+        "step": 1,
+        "count": 2
+      }
+    ],
+    "target_axis_order": [
+      0,
+      1,
+      2
+    ],
+    "target_chunk_shape": [
+      2,
+      2,
+      2
+    ]
+  },
+  "target_grid_shape": [
+    0,
+    2,
+    2
+  ],
+  "chunks": [],
+  "accounting": {
+    "opened": [],
+    "open_count": 0,
+    "bytes_read": 0
+  }
+}

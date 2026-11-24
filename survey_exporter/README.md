@@ -82,6 +82,82 @@ PYTHONPATH=src python3 -m chunk_export query \
 Python API：`Exporter(...).run()` 返回清单；`ResultIndex(out).locate(chunk, offset)`
 返回 `SourceRef(coord, chunk, origin, value, is_fill)`。
 
+## 多包逻辑合并（merge）
+
+巡测人员拿到多份上述局部交付后，可按**逻辑坐标**合并成覆盖完整
+`logical_shape` 的数据卷。输入是**有序的多个导出目录，顺序靠后的包优先**。
+
+兼容前提（不一致即 `incompatible_packages` / 退出码 2，拒绝发布）：
+
+- `logical_shape` 一致；
+- 整数 `dtype` 一致；
+- `fill_value` 一致；
+- 源块网格一致（`chunk_shape` 及由其推出的 `grid_shape`）。
+
+各包的采样范围（逐轴 start/step/count）、`target_axis_order`、
+`target_chunk_shape` 允许不同——合并时统一先映回逻辑坐标再对齐。
+
+覆盖规则：
+
+- **只有 `origin == "data"`（实采）的点参与覆盖**；
+- 实采点的值即使等于 `fill_value`，也仍是**真实缺测**，后包的真实缺测可以
+  覆盖前包的实采值；
+- `origin == "unsampled"` 的点一律不覆盖已有实采；
+- 所有包都没有实采到的位置保持 `fill_value`，并由独立的获胜掩码判为
+  `origin="unobserved"`，与真实缺测（`origin="data", is_fill=true`）区分。
+
+结果覆盖完整逻辑形状，默认按逻辑轴序 `[0,1,2]`、用 `--target-chunk-shape`
+指定的目标块形交付（也可用 `--target-axis-order` 换轴）。每个结果块
+`chunks/m_a_b_c.npy` 旁有获胜输入掩码 `provenance/p_a_b_c.npy`（int32，
+值为获胜输入序号，`-1` 表示未观测）。合并清单格式为 `chunk-merge/1`，
+`inputs` 按顺序记录每个输入包。
+
+```bash
+# 合并（位置参数 / --inputs / 重复 --input 均可；--inputs 也支持 a,b,c）
+PYTHONPATH=src python3 -m chunk_export merge out_a out_b out_c \
+    --out merged --target-chunk-shape 8,8,8
+
+# 也可用合并参数 JSON：{"inputs": [...], "out": "...", "target_chunk_shape": [8,8,8]}
+PYTHONPATH=src python3 -m chunk_export merge --request merge_req.json
+
+# 查询合并结果点：获胜输入序号/路径、源坐标、是否真实缺测
+PYTHONPATH=src python3 -m chunk_export query \
+    --export merged --chunk 0,0,0 --offset 37
+# 或显式子命令（别名 merge_query / query-merge / mquery）
+PYTHONPATH=src python3 -m chunk_export merge-query \
+    --merge merged --chunk 0,0,0 --offset 37
+# => {"coord":[...],"origin":"data","value":...,"is_fill":false,
+#     "input_index":2,"input_path":"out_c","winner":2,
+#     "source_coord":[...],"source_chunk":[...], ...}
+```
+
+Python API：
+
+```python
+from chunk_export import Merger, MergeIndex, ResultIndex
+
+manifest = Merger(["out_a", "out_b", "out_c"], "merged",
+                  target_chunk_shape=(8, 8, 8)).run()
+idx = MergeIndex("merged")          # 或 ResultIndex("merged")（自动委托）
+ref = idx.locate((0, 0, 0), 37)
+ref.input_index      # 获胜输入序号（靠后的包优先）；未观测为 None
+ref.input_path       # 获胜输入路径
+ref.source_coord     # = ref.coord，逻辑源坐标
+ref.origin           # 'data'（含真实缺测）| 'unobserved'
+ref.is_fill          # 值是否等于 fill_value
+```
+
+保证：
+
+- **原子发布**：先写 `merged.merge-tmp-<pid>/` 与外部暂存，全部成功后才
+  `rename` 成目标目录；格式/网格不兼容、命中包损坏（不可读 / sha256 不符 /
+  无法解码 / 形状类型不符）或合并失败时删除临时目录，目标路径不存在可被误用
+  的半成品；CLI 不兼容退出码 2、命中包损坏退出码 3；
+- **只在命中时开块**：按优先级逆序落子，已被更高优先级实采全包覆盖的输入块
+  不再打开/核验，因此这种“未命中”块的损坏不会阻止发布；真正需要的块损坏
+  仍按 `reason="corrupt"` 拒绝；
+- 合并包目录也可再次作为 `merge` 输入（其获胜掩码 `>=0` 的点按实采处理）。
+
 ## 保证与限制
 
 - **单次开块**：每个命中源块整个作业只打开/解码一次（远端逐开块计费），

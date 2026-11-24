@@ -1,0 +1,456 @@
+{
+  "format": "chunk-merge/1",
+  "source": {
+    "logical_shape": [
+      6,
+      2,
+      2
+    ],
+    "chunk_shape": [
+      2,
+      2,
+      2
+    ],
+    "grid_shape": [
+      3,
+      1,
+      1
+    ],
+    "dtype": "int32",
+    "fill_value": -9,
+    "unsampled_chunks": []
+  },
+  "logical_shape": [
+    6,
+    2,
+    2
+  ],
+  "chunk_shape": [
+    2,
+    2,
+    2
+  ],
+  "source_chunk_shape": [
+    2,
+    2,
+    2
+  ],
+  "grid_shape": [
+    3,
+    1,
+    1
+  ],
+  "dtype": "int32",
+  "fill_value": -9,
+  "request": {
+    "axes": [
+      {
+        "start": 0,
+        "step": 1,
+        "count": 6
+      },
+      {
+        "start": 0,
+        "step": 1,
+        "count": 2
+      },
+      {
+        "start": 0,
+        "step": 1,
+        "count": 2
+      }
+    ],
+    "target_axis_order": [
+      0,
+      1,
+      2
+    ],
+    "target_chunk_shape": [
+      2,
+      2,
+      2
+    ]
+  },
+  "target_axis_order": [
+    0,
+    1,
+    2
+  ],
+  "target_chunk_shape": [
+    2,
+    2,
+    2
+  ],
+  "target_grid_shape": [
+    6,
+    2,
+    2
+  ],
+  "target_dims": [
+    3,
+    1,
+    1
+  ],
+  "inputs": [
+    {
+      "index": 0,
+      "path": "/workspace/verify/tmp/qC",
+      "resolved_path": "/workspace/verify/tmp/qC",
+      "format": "chunk-export/1",
+      "kind": "export",
+      "logical_shape": [
+        6,
+        2,
+        2
+      ],
+      "chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "grid_shape": [
+        3,
+        1,
+        1
+      ],
+      "dtype": "int32",
+      "fill_value": -9,
+      "target_axis_order": [
+        2,
+        1,
+        0
+      ],
+      "target_chunk_shape": [
+        1,
+        1,
+        1
+      ],
+      "target_grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "request": {
+        "axes": [
+          {
+            "start": 0,
+            "step": 1,
+            "count": 1
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 1
+          },
+          {
+            "start": 1,
+            "step": -1,
+            "count": 1
+          }
+        ],
+        "target_axis_order": [
+          2,
+          1,
+          0
+        ],
+        "target_chunk_shape": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "packages": [
+    {
+      "index": 0,
+      "path": "/workspace/verify/tmp/qC",
+      "resolved_path": "/workspace/verify/tmp/qC",
+      "format": "chunk-export/1",
+      "kind": "export",
+      "logical_shape": [
+        6,
+        2,
+        2
+      ],
+      "chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "grid_shape": [
+        3,
+        1,
+        1
+      ],
+      "dtype": "int32",
+      "fill_value": -9,
+      "target_axis_order": [
+        2,
+        1,
+        0
+      ],
+      "target_chunk_shape": [
+        1,
+        1,
+        1
+      ],
+      "target_grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "request": {
+        "axes": [
+          {
+            "start": 0,
+            "step": 1,
+            "count": 1
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 1
+          },
+          {
+            "start": 1,
+            "step": -1,
+            "count": 1
+          }
+        ],
+        "target_axis_order": [
+          2,
+          1,
+          0
+        ],
+        "target_chunk_shape": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "index": 0,
+      "path": "/workspace/verify/tmp/qC",
+      "resolved_path": "/workspace/verify/tmp/qC",
+      "format": "chunk-export/1",
+      "kind": "export",
+      "logical_shape": [
+        6,
+        2,
+        2
+      ],
+      "chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "grid_shape": [
+        3,
+        1,
+        1
+      ],
+      "dtype": "int32",
+      "fill_value": -9,
+      "target_axis_order": [
+        2,
+        1,
+        0
+      ],
+      "target_chunk_shape": [
+        1,
+        1,
+        1
+      ],
+      "target_grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "request": {
+        "axes": [
+          {
+            "start": 0,
+            "step": 1,
+            "count": 1
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 1
+          },
+          {
+            "start": 1,
+            "step": -1,
+            "count": 1
+          }
+        ],
+        "target_axis_order": [
+          2,
+          1,
+          0
+        ],
+        "target_chunk_shape": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "merged_from": [
+    {
+      "index": 0,
+      "path": "/workspace/verify/tmp/qC",
+      "resolved_path": "/workspace/verify/tmp/qC",
+      "format": "chunk-export/1",
+      "kind": "export",
+      "logical_shape": [
+        6,
+        2,
+        2
+      ],
+      "chunk_shape": [
+        2,
+        2,
+        2
+      ],
+      "grid_shape": [
+        3,
+        1,
+        1
+      ],
+      "dtype": "int32",
+      "fill_value": -9,
+      "target_axis_order": [
+        2,
+        1,
+        0
+      ],
+      "target_chunk_shape": [
+        1,
+        1,
+        1
+      ],
+      "target_grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "request": {
+        "axes": [
+          {
+            "start": 0,
+            "step": 1,
+            "count": 1
+          },
+          {
+            "start": 0,
+            "step": 1,
+            "count": 1
+          },
+          {
+            "start": 1,
+            "step": -1,
+            "count": 1
+          }
+        ],
+        "target_axis_order": [
+          2,
+          1,
+          0
+        ],
+        "target_chunk_shape": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "chunks": [
+    {
+      "chunk": [
+        0,
+        0,
+        0
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m0_0_0.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "d05006b54fc06c637a3c448f7da8ee421b6cc8fc72bcd171c9aac3794e5752fc",
+      "provenance": "provenance/p0_0_0.npy",
+      "winner_file": "provenance/p0_0_0.npy",
+      "winner": "provenance/p0_0_0.npy",
+      "observed": 1,
+      "unobserved": 7
+    },
+    {
+      "chunk": [
+        1,
+        0,
+        0
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m1_0_0.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "edefe79545fdd0458c7178fb5a0444fe98d2b4ca891228f4ab5c04ea98168049",
+      "provenance": "provenance/p1_0_0.npy",
+      "winner_file": "provenance/p1_0_0.npy",
+      "winner": "provenance/p1_0_0.npy",
+      "observed": 0,
+      "unobserved": 8
+    },
+    {
+      "chunk": [
+        2,
+        0,
+        0
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file": "chunks/m2_0_0.npy",
+      "elements": 8,
+      "bytes": 160,
+      "sha256": "edefe79545fdd0458c7178fb5a0444fe98d2b4ca891228f4ab5c04ea98168049",
+      "provenance": "provenance/p2_0_0.npy",
+      "winner_file": "provenance/p2_0_0.npy",
+      "winner": "provenance/p2_0_0.npy",
+      "observed": 0,
+      "unobserved": 8
+    }
+  ],
+  "stats": {
+    "input_count": 1,
+    "elements": 24,
+    "observed": 1,
+    "unobserved": 23,
+    "opened_chunk_count": 1,
+    "opened_chunks": [
+      {
+        "input": 0,
+        "chunk": [
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  }
+}

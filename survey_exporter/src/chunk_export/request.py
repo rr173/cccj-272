@@ -81,3 +81,72 @@ class Request:
             if lo < 0 or hi >= length:
                 raise RequestInvalid(
                     f"axes[{i}] 坐标越界: [{lo}, {hi}] 不在 [0, {length}) 内")
+
+
+def _triplet(value, what, *, positive=False, permutation=False):
+    if isinstance(value, str):
+        text = value.strip()
+        parsed = None
+        if text.startswith("["):
+            import json
+            try:
+                parsed = json.loads(text)
+            except ValueError:
+                parsed = None
+        if parsed is None:
+            for sep in (",", "x", "X", ";"):
+                if sep in text:
+                    parts = [p.strip() for p in text.split(sep) if p.strip()]
+                    if len(parts) == 3:
+                        parsed = parts
+                    break
+        value = parsed
+    if not isinstance(value, (list, tuple)) or len(value) != 3:
+        raise RequestInvalid(f"{what} 必须是三元整数列表: {value!r}")
+    out = []
+    for v in value:
+        if isinstance(v, bool):
+            raise RequestInvalid(f"{what} 不允许布尔值: {v!r}")
+        try:
+            iv = operator.index(v)
+        except TypeError:
+            try:
+                iv = int(str(v).strip())
+            except (TypeError, ValueError):
+                raise RequestInvalid(f"{what} 必须是整数，得到 {v!r}") from None
+        out.append(iv)
+    t = tuple(out)
+    if positive and any(v <= 0 for v in t):
+        raise RequestInvalid(f"{what} 必须为正整数: {t}")
+    if permutation and sorted(t) != [0, 1, 2]:
+        raise RequestInvalid(f"{what} 不是轴排列: {t}")
+    return t
+
+
+@dataclass(frozen=True)
+class MergeRequest:
+    """合并交付参数：结果目标块形必填，目标轴序缺省为逻辑轴序 [0,1,2]。"""
+
+    target_chunk_shape: tuple
+    target_axis_order: tuple = (0, 1, 2)
+
+    @classmethod
+    def from_dict(cls, raw):
+        if not isinstance(raw, dict):
+            raise RequestInvalid("合并请求必须是对象")
+        tcs = raw.get("target_chunk_shape",
+                      raw.get("target_chunks", raw.get("chunk_shape")))
+        if tcs is None:
+            raise RequestInvalid("合并请求缺少 target_chunk_shape")
+        q = raw.get("target_axis_order",
+                    raw.get("axis_order", raw.get("order", (0, 1, 2))))
+        return cls(
+            target_chunk_shape=_triplet(
+                tcs, "target_chunk_shape", positive=True),
+            target_axis_order=_triplet(
+                q, "target_axis_order", permutation=True),
+        )
+
+
+# 常见别名
+MergeConfig = MergeRequest

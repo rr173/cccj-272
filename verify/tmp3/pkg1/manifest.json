@@ -1,0 +1,304 @@
+{
+  "format": "chunk-export/1",
+  "source": {
+    "logical_shape": [
+      8,
+      6,
+      6
+    ],
+    "chunk_shape": [
+      3,
+      3,
+      3
+    ],
+    "dtype": "int32",
+    "fill_value": -7,
+    "unsampled_chunks": [
+      [
+        1,
+        0,
+        1
+      ]
+    ]
+  },
+  "request": {
+    "axes": [
+      {
+        "start": 0,
+        "step": 1,
+        "count": 8
+      },
+      {
+        "start": 5,
+        "step": -1,
+        "count": 6
+      },
+      {
+        "start": 0,
+        "step": 1,
+        "count": 6
+      }
+    ],
+    "target_axis_order": [
+      1,
+      2,
+      0
+    ],
+    "target_chunk_shape": [
+      4,
+      3,
+      5
+    ]
+  },
+  "target_grid_shape": [
+    6,
+    6,
+    8
+  ],
+  "chunks": [
+    {
+      "chunk": [
+        0,
+        0,
+        0
+      ],
+      "shape": [
+        4,
+        3,
+        5
+      ],
+      "file": "chunks/t0_0_0.npy",
+      "elements": 60,
+      "bytes": 368,
+      "sha256": "322644f7f8b8e4d971b9cf1aebef98d975aba89ea14d58c1d2ea2acbe699abc7"
+    },
+    {
+      "chunk": [
+        0,
+        0,
+        1
+      ],
+      "shape": [
+        4,
+        3,
+        3
+      ],
+      "file": "chunks/t0_0_1.npy",
+      "elements": 36,
+      "bytes": 272,
+      "sha256": "e5bac4dd77ea3510b108bfd93a6de030d0380aac5bdc5190a363508e2616f84e"
+    },
+    {
+      "chunk": [
+        0,
+        1,
+        0
+      ],
+      "shape": [
+        4,
+        3,
+        5
+      ],
+      "file": "chunks/t0_1_0.npy",
+      "elements": 60,
+      "bytes": 368,
+      "sha256": "5021fbdc2704163ff154df3b75b5e655227cc242f16f6bf86019b67320c7cff0"
+    },
+    {
+      "chunk": [
+        0,
+        1,
+        1
+      ],
+      "shape": [
+        4,
+        3,
+        3
+      ],
+      "file": "chunks/t0_1_1.npy",
+      "elements": 36,
+      "bytes": 272,
+      "sha256": "9da1758415b4f7a6c584593974a6c5b0a7ddea6de02cc3cf125452b7efc928d5"
+    },
+    {
+      "chunk": [
+        1,
+        0,
+        0
+      ],
+      "shape": [
+        2,
+        3,
+        5
+      ],
+      "file": "chunks/t1_0_0.npy",
+      "elements": 30,
+      "bytes": 248,
+      "sha256": "725a6b83124ca3b7782b6af369a9cfebcc2ca5a947f5f2a9e77eeed7b8274965"
+    },
+    {
+      "chunk": [
+        1,
+        0,
+        1
+      ],
+      "shape": [
+        2,
+        3,
+        3
+      ],
+      "file": "chunks/t1_0_1.npy",
+      "elements": 18,
+      "bytes": 200,
+      "sha256": "be0eb434053d6013be820a4fc211f86efd9488412192ad256dad1b4addfeddce"
+    },
+    {
+      "chunk": [
+        1,
+        1,
+        0
+      ],
+      "shape": [
+        2,
+        3,
+        5
+      ],
+      "file": "chunks/t1_1_0.npy",
+      "elements": 30,
+      "bytes": 248,
+      "sha256": "93e4ee6f2b0b5b6673cd19d535f15546f25caa11b075c1d451486ca26fed3e26"
+    },
+    {
+      "chunk": [
+        1,
+        1,
+        1
+      ],
+      "shape": [
+        2,
+        3,
+        3
+      ],
+      "file": "chunks/t1_1_1.npy",
+      "elements": 18,
+      "bytes": 200,
+      "sha256": "8424c08153106dcb0c4a517236fa699b17a24902d64e9c11afb815e866df4283"
+    }
+  ],
+  "accounting": {
+    "opened": [
+      {
+        "chunk": [
+          0,
+          0,
+          0
+        ],
+        "bytes": 236,
+        "elements": 27,
+        "order": 0
+      },
+      {
+        "chunk": [
+          0,
+          0,
+          1
+        ],
+        "bytes": 236,
+        "elements": 27,
+        "order": 1
+      },
+      {
+        "chunk": [
+          0,
+          1,
+          0
+        ],
+        "bytes": 236,
+        "elements": 27,
+        "order": 2
+      },
+      {
+        "chunk": [
+          0,
+          1,
+          1
+        ],
+        "bytes": 236,
+        "elements": 27,
+        "order": 3
+      },
+      {
+        "chunk": [
+          1,
+          0,
+          0
+        ],
+        "bytes": 236,
+        "elements": 27,
+        "order": 4
+      },
+      {
+        "chunk": [
+          1,
+          1,
+          0
+        ],
+        "bytes": 236,
+        "elements": 27,
+        "order": 5
+      },
+      {
+        "chunk": [
+          1,
+          1,
+          1
+        ],
+        "bytes": 236,
+        "elements": 27,
+        "order": 6
+      },
+      {
+        "chunk": [
+          2,
+          0,
+          0
+        ],
+        "bytes": 200,
+        "elements": 18,
+        "order": 7
+      },
+      {
+        "chunk": [
+          2,
+          0,
+          1
+        ],
+        "bytes": 200,
+        "elements": 18,
+        "order": 8
+      },
+      {
+        "chunk": [
+          2,
+          1,
+          0
+        ],
+        "bytes": 200,
+        "elements": 18,
+        "order": 9
+      },
+      {
+        "chunk": [
+          2,
+          1,
+          1
+        ],
+        "bytes": 200,
+        "elements": 18,
+        "order": 10
+      }
+    ],
+    "open_count": 11,
+    "bytes_read": 2452
+  }
+}

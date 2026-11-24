@@ -1,0 +1,1 @@
+{"axes": [{"start": 4, "step": -2, "count": 3}, {"start": 0, "step": 1, "count": 4}, {"start": 5, "step": -2, "count": 3}], "target_axis_order": [2, 0, 1], "target_chunk_shape": [2, 2, 2]}

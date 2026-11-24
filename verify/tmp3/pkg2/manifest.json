@@ -1,0 +1,132 @@
+{
+  "format": "chunk-export/1",
+  "source": {
+    "logical_shape": [
+      8,
+      6,
+      6
+    ],
+    "chunk_shape": [
+      3,
+      3,
+      3
+    ],
+    "dtype": "int32",
+    "fill_value": -7,
+    "unsampled_chunks": []
+  },
+  "request": {
+    "axes": [
+      {
+        "start": 2,
+        "step": 1,
+        "count": 3
+      },
+      {
+        "start": 0,
+        "step": 1,
+        "count": 6
+      },
+      {
+        "start": 0,
+        "step": 1,
+        "count": 2
+      }
+    ],
+    "target_axis_order": [
+      0,
+      1,
+      2
+    ],
+    "target_chunk_shape": [
+      2,
+      6,
+      2
+    ]
+  },
+  "target_grid_shape": [
+    3,
+    6,
+    2
+  ],
+  "chunks": [
+    {
+      "chunk": [
+        0,
+        0,
+        0
+      ],
+      "shape": [
+        2,
+        6,
+        2
+      ],
+      "file": "chunks/t0_0_0.npy",
+      "elements": 24,
+      "bytes": 224,
+      "sha256": "c09a7200f6409517ef2a855923ee4f0423c930a4d110c31a35385dbfcd9cde6d"
+    },
+    {
+      "chunk": [
+        1,
+        0,
+        0
+      ],
+      "shape": [
+        1,
+        6,
+        2
+      ],
+      "file": "chunks/t1_0_0.npy",
+      "elements": 12,
+      "bytes": 176,
+      "sha256": "61293d16b4df611b966a81e9e40a51192a40c60cf5fac65c840b6c2a99f81e91"
+    }
+  ],
+  "accounting": {
+    "opened": [
+      {
+        "chunk": [
+          0,
+          0,
+          0
+        ],
+        "bytes": 236,
+        "elements": 27,
+        "order": 0
+      },
+      {
+        "chunk": [
+          0,
+          1,
+          0
+        ],
+        "bytes": 236,
+        "elements": 27,
+        "order": 1
+      },
+      {
+        "chunk": [
+          1,
+          0,
+          0
+        ],
+        "bytes": 236,
+        "elements": 27,
+        "order": 2
+      },
+      {
+        "chunk": [
+          1,
+          1,
+          0
+        ],
+        "bytes": 236,
+        "elements": 27,
+        "order": 3
+      }
+    ],
+    "open_count": 4,
+    "bytes_read": 944
+  }
+}

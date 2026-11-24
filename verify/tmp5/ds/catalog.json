@@ -1,0 +1,48 @@
+{
+  "logical_shape": [
+    4,
+    2,
+    2
+  ],
+  "chunk_shape": [
+    2,
+    2,
+    2
+  ],
+  "dtype": "int16",
+  "fill_value": -9,
+  "max_decode_elements": 1000000,
+  "chunks": {
+    "0,0,0": {
+      "path": "chunks/c0_0_0.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "5000b1b26fd6beffe55a185d4ad25379b24c4e2c730a61f928ec3acf6c947fba"
+    },
+    "1,0,0": {
+      "path": "chunks/c1_0_0.npy",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "file_axis_order": [
+        0,
+        1,
+        2
+      ],
+      "value_count": 8,
+      "sha256": "1b935300b741010c22cc96b02052ad754858048dfda3bc8ca919199e9ad7be45"
+    }
+  },
+  "unsampled": []
+}
